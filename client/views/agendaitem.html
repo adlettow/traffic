@@ -1,0 +1,115 @@
+<div class="search-header">
+    <div class="search-items">
+        <select name="search-category" class="btn btn-default" id="search-category">
+            <option value="1">Agenda Date</option>
+            <option value="2">Proposal #</option>
+            <option value="3">Ordinance #</option>
+            <option value="4">Resolution #</option>
+        </select>
+        <label for="traffic-search">
+            <input type="text" class="form-control" id="traffic-search" placeholder="Search..">
+        </label>
+        <a href="/agenda"><button class="search btn btn-default">Search</button></a>
+        <button class="create-agenda btn btn-default">Create Agenda</button>
+        <a href="/agendaitem"><button class="create-agenda-item btn btn-default">Create Agenda Item</button></a>
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="mainView">
+        <div class="top">
+            <div class="agenda-create-select">
+                <label for="agenda-date">
+                    <span>Agenda: </span>
+                    <select name="agenda" id="agenda-date" ng-model="agendaItem.id">
+                        <option value="february">02/2017</option>
+                        <option value="january">01/2017</option>
+                        <option value="december">12/2016</option>
+                        <option value="november">11/2016</option>
+                    </select>
+                </label>
+                <label for="agenda-item-type">
+                    <span>Item Type: </span>
+                    <select name="itemType" id="agenda-item-type" ng-model="agendaItem.type">
+                        <option value="RES">Resolution</option>
+                        <option value="PROP">Proposal</option>
+                        <option value="ORD">Ordinance</option>
+                    </select>
+                </label>
+                <button class="create btn btn-default">Create</button>
+            </div>
+            <div class="container-fluid input-table">
+                <table class="form">
+                    <tr class="agenda-item-inputs">
+                        <td class="left-col">
+                            <label for="principal-street">
+                                <span class="input-label">Principal Street: </span>
+                                <input type="text" id="principal-street" ng-model="location.principalStreet">
+                            </label>
+                            <br>
+                            <label for="at-from-street">
+                                <span class="input-label">At/From Street: </span>
+                                <input type="text" id="at-from-street" ng-model="location.atFromStreet">
+                            </label>
+                            <br>
+                            <label for="direction">
+                                <span class="input-label">Direction: </span>
+                                <input type="text" id="direction" ng-model="location.direction">
+                            </label>
+                            <br>
+                            <label for="x-coordinate">
+                                <span class="input-label">X: </span>
+                                <input type="text" id="x-coordinate" ng-model="location.x">
+                            </label>
+                            <br>
+                            <label for="y-coordinate">
+                                <span class="input-label">Y: </span>
+                                <input type="text" id="y-coordinate" ng-model="location.y">
+                            </label>
+                        </td>
+                        <td class="right-col">
+                            <label for="agenda-item-number">
+                                <span class="input-label">Item Number: </span>
+                                <input type="text" id="agenda-item-number" ng-model="agendaItem.number">
+                            </label>
+                            <br>
+                            <label for="agenda-item-description">
+                                <span class="input-label">Description: </span>
+                                <input type="text" id="agenda-item-description">
+                            </label>
+                            <br>
+                            <div class="resolution-inputs">
+                                <label for="resolution-category">
+                                    <span class="input-label">Resolution Category: </span>
+                                    <select name="resolutionCategory" id="resolution-category" ng-model="resolutionitem.category">
+                                        <option value="1">Traffic Control Signals</option>
+                                        <option value="2">Speed Limits</option>
+                                        <option value="3">Turn Prohibitions</option>
+                                        <option value="4">One Way Streets and Alleys</option>
+                                        <option value="5">Through Streets</option>
+                                    </select>
+                                </label>
+                                <br>
+                                <label for="reference-number">
+                                    <span class="input-label">Reference Number: </span>
+                                    <input type="text" id="reference-number">
+                                </label>
+                                <br>
+                                <label for="sequence-number">
+                                    <span class="input-label">Sequence Number: </span>
+                                    <input type="text" id="sequence-number">
+                                </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        <div class="bottom">
+            <div class="agenda-navigation">
+                <ul class="nav nav-tabs">
+                    <li role="button"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
